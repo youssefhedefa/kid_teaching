@@ -19,7 +19,7 @@ class FooterOfSplashScreen extends StatelessWidget {
             child: Image(
               width: 170.w,
               image: const AssetImage(
-                AssetProvider.birdImage,
+                AssetImageProvider.birdImage,
               ),
             ),
           ),
@@ -28,7 +28,7 @@ class FooterOfSplashScreen extends StatelessWidget {
             child: Image(
               width: 148.w,
               image: const AssetImage(
-                AssetProvider.catImage,
+                AssetImageProvider.catImage,
               ),
             ),
           ),
@@ -37,7 +37,7 @@ class FooterOfSplashScreen extends StatelessWidget {
               width: 180.w,
               height: 250.h,
               image: const AssetImage(
-                AssetProvider.bottomStartsImage,
+                AssetImageProvider.bottomStartsImage,
               ),
             ),
           ),

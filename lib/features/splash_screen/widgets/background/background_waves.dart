@@ -9,9 +9,9 @@ class BackgroundWaves extends StatelessWidget {
     return const Stack(
       children: [
         Image(
-          image: AssetImage(AssetProvider.scarf1Image),),
+          image: AssetImage(AssetImageProvider.scarf1Image),),
         Image(
-          image: AssetImage(AssetProvider.scarf2Image),
+          image: AssetImage(AssetImageProvider.scarf2Image),
         ),
       ],
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kid_teaching/core/helper/image_provider.dart';
+import 'package:kid_teaching/features/splash_screen/widgets/animation/penguin_animation.dart';
+import 'package:kid_teaching/features/splash_screen/widgets/animation/starts_animation.dart';
 
 class SplashTopView extends StatelessWidget {
   const SplashTopView({super.key});
@@ -9,30 +11,26 @@ class SplashTopView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
-      height: 300,
+      height: 300.h,
       child: Stack(
-        alignment: Alignment.topRight,
         children: [
           Positioned(
             left: 0,
             top: 28.h,
-            child: const Image(
-              width: 200,
-              height: 320,
-              image: AssetImage(
-                AssetImageProvider.topStartsImage,
+            child: CustomOpacityAnimated(
+              widget :  Image(
+                width: 194.w,
+                height: 320.h,
+                image: const AssetImage(
+                  AssetImageProvider.topStartsImage,
+                ),
               ),
             ),
           ),
           Positioned(
             top: 28.h,
-            right: 0,
-            child: const Image(
-              height: 146,
-              image: AssetImage(
-                AssetImageProvider.penguinImage,
-              ),
-            ),
+            left: MediaQuery.of(context).size.width - 107.w,
+              child: const PenguinAnimation(),
           ),
         ],
       ),

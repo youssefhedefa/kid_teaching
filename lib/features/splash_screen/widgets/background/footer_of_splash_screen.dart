@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kid_teaching/core/helper/image_provider.dart';
+import 'package:kid_teaching/features/splash_screen/widgets/animation/bird_animation.dart';
+import 'package:kid_teaching/features/splash_screen/widgets/animation/cat_animation.dart';
+import 'package:kid_teaching/features/splash_screen/widgets/animation/starts_animation.dart';
 
 
 class FooterOfSplashScreen extends StatelessWidget {
@@ -16,24 +19,16 @@ class FooterOfSplashScreen extends StatelessWidget {
         children: [
           Positioned(
             left: 0,
-            child: Image(
-              width: 170.w,
-              image: const AssetImage(
-                AssetImageProvider.birdImage,
-              ),
-            ),
+            top: 30.h,
+            child: const BirdAnimation(),
           ),
           Positioned(
-            left: 120,
-            child: Image(
-              width: 148.w,
-              image: const AssetImage(
-                AssetImageProvider.catImage,
-              ),
-            ),
+            left: 116.w,
+              bottom: 0,
+              child: const CatAnimation(),
           ),
-          Positioned(
-            child: Image(
+          CustomOpacityAnimated(
+            widget: Image(
               width: 180.w,
               height: 250.h,
               image: const AssetImage(

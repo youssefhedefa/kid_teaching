@@ -6,4 +6,5 @@ class AssetImageProvider{
   static const String bottomStartsImage = 'assets/images/bottom_starts.png';
   static const String topStartsImage = 'assets/images/top_stars.png';
   static const String penguinImage = 'assets/images/Penguin.png';
+  static const String homeBackgroundImage = 'assets/images/home_background.png';
 }

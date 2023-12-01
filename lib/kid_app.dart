@@ -22,7 +22,7 @@ class KidApp extends StatelessWidget {
           useMaterial3: true,
         ),
         initialRoute: RouteProvider.splashScreen,
-        onGenerateRoute: appRouter.generateRoute,      ),
+        onGenerateRoute: appRouter.generateRoute,),
     );
   }
 }

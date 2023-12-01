@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kid_teaching/core/routing/routes_provider.dart';
+import 'package:kid_teaching/features/home_screen/presentation/views/home_view.dart';
 import 'package:kid_teaching/features/splash_screen/splash_view.dart';
 
 class AppRouter {
@@ -8,6 +9,11 @@ class AppRouter {
       case RouteProvider.splashScreen:
         return MaterialPageRoute(
           builder: (_) => const SplashView(),
+        );
+
+      case RouteProvider.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeView(),
         );
 
       default:

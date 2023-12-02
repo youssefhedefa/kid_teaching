@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:kid_teaching/core/theming/colors.dart';
 
 class TextStyleProvider {
@@ -34,4 +35,15 @@ class TextStyleProvider {
         ..color = Colors.black
   );
 
+  static TextStyle homeFloatingActionBottomCounterSemiBold14 = GoogleFonts.montserrat(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+  );
+
+  static TextStyle homeFloatingActionBottomNameRegular14 = TextStyle(
+    color: ColorProvider.homeFloatingActionBottomNameColor,
+    fontFamily: 'Summary_notes',
+    fontSize: 14.sp,
+  );
 }

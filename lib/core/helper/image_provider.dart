@@ -7,4 +7,12 @@ class AssetImageProvider{
   static const String topStartsImage = 'assets/images/top_stars.png';
   static const String penguinImage = 'assets/images/Penguin.png';
   static const String homeBackgroundImage = 'assets/images/home_background.png';
+  static const String startButtonImage = 'assets/images/start_button.png';
+  static const String candyImage = 'assets/images/candy.png';
+  static const String puzzleImage = 'assets/images/puzzle.png';
+  static const String homeImage = 'assets/images/home.png';
+  static const String bearImage = 'assets/images/bear.png';
+
+
+
 }

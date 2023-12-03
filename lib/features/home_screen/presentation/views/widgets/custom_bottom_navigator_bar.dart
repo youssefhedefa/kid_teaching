@@ -1,14 +1,27 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kid_teaching/core/helper/image_provider.dart';
 import 'package:kid_teaching/core/theming/colors.dart';
+import 'package:kid_teaching/features/home_screen/presentation/views/animations/animated_nav_bar_item.dart';
 
-import 'bottom_nav_item.dart';
-
-class CustomBottomNavigatorBar extends StatelessWidget {
+class CustomBottomNavigatorBar extends StatefulWidget {
   const CustomBottomNavigatorBar({super.key});
+
+  @override
+  State<CustomBottomNavigatorBar> createState() =>
+      _CustomBottomNavigatorBarState();
+}
+
+class _CustomBottomNavigatorBarState extends State<CustomBottomNavigatorBar> {
+
+
+  int currentIndex = 0;
+  List<String> labels = ['Puzzles', 'Home', 'Prizes',];
+  List<String> images = [
+    AssetImageProvider.puzzleImage,
+    AssetImageProvider.homeImage,
+    AssetImageProvider.bearImage,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +32,28 @@ class CustomBottomNavigatorBar extends StatelessWidget {
         color: ColorProvider.floatingActionButtonBackgroundColor,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(width: 4.w,),
-          const BottomItemNav(image: AssetImageProvider.puzzleImage,),
-          const BottomItemNav(image: AssetImageProvider.homeImage,),
-          const BottomItemNav(image: AssetImageProvider.bearImage,),
-          SizedBox(width: 4.w,),
-
-        ],
+      child: ListView.separated(
+        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.symmetric(vertical: 12.h,horizontal: 12.w),
+        itemCount: 3,
+        itemBuilder: (context, index) => GestureDetector(
+          onTap: () {
+            setState(() {
+              currentIndex = index;
+            });
+          },
+          child: AnimatedNavItem(
+            label: labels[index],
+            clicked: currentIndex == index,
+            image: images[index],
+          ),
+        ),
+        separatorBuilder: (context, index) => SizedBox(
+          width: 20.w,
+        ),
       ),
     );
   }
 }
+

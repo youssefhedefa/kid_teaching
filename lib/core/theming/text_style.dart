@@ -46,4 +46,11 @@ class TextStyleProvider {
     fontFamily: 'Summary_notes',
     fontSize: 14.sp,
   );
+
+  static TextStyle fontRed24Regular = TextStyle(
+    fontFamily: 'Summary_notes',
+    fontSize: 24.sp,
+    color: const Color(0xffEF3349),
+  );
+
 }

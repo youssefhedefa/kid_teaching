@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kid_teaching/core/theming/colors.dart';
 
 class BottomItemNav extends StatelessWidget {
-  const BottomItemNav({super.key, required this.image});
+  const BottomItemNav({super.key, required this.image,});
 
   final String image;
 
